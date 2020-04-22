@@ -9,8 +9,8 @@ dataset_amount=255
 size_image=416
 
 #1_step1 - load data X
-imageFolderPath = 'D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/6._START_project/train/train/'
-imagePath = glob.glob(imageFolderPath + '/*.JPG') # ??
+imageFolderPath = 'D:/train/'
+imagePath = glob.glob(imageFolderPath + '/*.JPG') 
 im_array = np.array( [np.array(Image.open(img).convert('L'), 'f') for img in imagePath] )
 im_array=im_array/255
 im_array = im_array.reshape(dataset_amount,size_image,size_image, 1)
@@ -32,7 +32,7 @@ b=pred_y[27]
 #img=test_X[27]
 #4- step4 predict video
 
-cap = cv2.VideoCapture("D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/video.avi") 
+cap = cv2.VideoCapture("D:/project/video.avi") 
 while 1:
  
  ret, frame = cap.read() 
@@ -41,26 +41,19 @@ while 1:
 # break  
  img=frame
 
- name="D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/1.jpg"
-
+ name="D:/image_test/1.jpg"
  #img = cv2.cvtColor(name, cv2.COLOR_BGR2GRAY)
-
  img=cv2.imwrite(name,img)
- #img = cv2.imread("D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/1.jpg")
 
  imageFolderPath = 'D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/'
  imagePath_gray=glob.glob(imageFolderPath + '/*.JPG')
  print(imagePath_gray)
  #im_array = np.array( [np.array(Image.open(img).convert('L'), 'f') for img in imagePath_gray] ) # works zdest
-
  img_for_video = cv2.imread('D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/1.jpg')
  img_for_video = cv2.cvtColor(img_for_video, cv2.COLOR_BGR2GRAY)
-
  im_array=img_for_video
  print(im_array.shape)
- 
  img= im_array.reshape(1,416,416,1)
-
 # print(img.shape) 
  pred_y = model.predict(img) 
  b=pred_y[0]
