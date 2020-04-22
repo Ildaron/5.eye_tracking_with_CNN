@@ -1,4 +1,4 @@
-This is a very simple example of using a neural network to search for an object in an image
+Of course, it is not correct to use CNN for so simple task. But this example only for demonstrating how CNN can works
 
 1 step. We generate the new images with a white circle on the image, the center of coordinates of which is different.
 2 step. We train the CNN neural network on these images and labeling information.
