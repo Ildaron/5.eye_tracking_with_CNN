@@ -45,11 +45,11 @@ while 1:
  #img = cv2.cvtColor(name, cv2.COLOR_BGR2GRAY)
  img=cv2.imwrite(name,img)
 
- imageFolderPath = 'D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/'
+ imageFolderPath = 'D:/image_test/'
  imagePath_gray=glob.glob(imageFolderPath + '/*.JPG')
  print(imagePath_gray)
  #im_array = np.array( [np.array(Image.open(img).convert('L'), 'f') for img in imagePath_gray] ) # works zdest
- img_for_video = cv2.imread('D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/7._START_project/image_test/1.jpg')
+ img_for_video = cv2.imread('D:/1.jpg')
  img_for_video = cv2.cvtColor(img_for_video, cv2.COLOR_BGR2GRAY)
  im_array=img_for_video
  print(im_array.shape)
