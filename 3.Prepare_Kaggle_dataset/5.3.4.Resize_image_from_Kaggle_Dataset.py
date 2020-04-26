@@ -25,7 +25,7 @@ for a in range (1,11221,1):
  image=cv2.resize(image,newsize)
  new_image_place="D:/resize_image/new_image/"
 #cv2.imwrite(os.path.join(new_image_place, 'waka.jpg'), new_image_place)
- cv2.imwrite(os.path.join("D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/8.Train_the_model_by_Kaggle/8.1_prepare_dataset/1.Resize_image/new_image/" ,  str(a)+".jpg"), image)
+ cv2.imwrite(os.path.join("D:/new_image/" ,  str(a)+".jpg"), image)
  #cv2.imshow("foo",image)
  cv2.waitKey()
 
