@@ -1,6 +1,6 @@
 import cv2 
 import numpy as np
-img = cv2.imread('D:/worktable/science/13.Eyes_tracking/3.My_neural_network_for_Eye/8.Train_the_model_by_Kaggle/8.1_prepare_dataset/1.Resize_image/new_image/70.jpg') 
+img = cv2.imread('D:/70.jpg') 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('ImageWindow1', img) 
 
