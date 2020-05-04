@@ -5,12 +5,9 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('ImageWindow1', img) 
 
 def iris_size(frame):
-      #  frame = frame[5:-5, 5:-5]
-      #  height, width = frame.shape[:2]
         height, width = frame.shape
         nb_pixels = height * width
         nb_blacks = nb_pixels - cv2.countNonZero(frame)
-        #print (cv2.countNonZero(frame))
         return nb_blacks / nb_pixels
 
 def find_best_threshold(eye_frame):
