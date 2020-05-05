@@ -16,7 +16,7 @@ def iris_size(frame):
 def find_best_threshold(eye_frame):
  average_iris_size = 0.14
  trials = {}
- for threshold in range(0, 100, 5):
+ for threshold in range(0, 100, 1):
   iris_frame=cv2.threshold(eye_frame, threshold, 255, cv2.THRESH_BINARY)[1]
   trials[threshold] = iris_size(iris_frame)
  # print (trials.items())
